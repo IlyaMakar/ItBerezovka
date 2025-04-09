@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Математическая игра "Реши пример"</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+  }
+
+  body::before {
+    content: ""; /* Обязательно для псевдоэлементов */
+    position: fixed; /* Позиционируем псевдоэлемент относительно окна браузера */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/_9KA-VXnAdA.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Помещаем псевдоэлемент за контент */
+    opacity: 0.8; /* Добавляем прозрачность */
+  }
+  </style>
+</head>
+<body>
+
+  <h1>Привет, друг! &#128516;</h1> 
+    
+    <h2>Добро пожаловать в игру "Реши пример"!</h2>
+  
+
+  <div id="example"></div>
+
+  <input type="number" id="answer" placeholder="Ваш ответ">
+  <button onclick="checkAnswer()">Проверить</button>
+
+  <div id="result"></div>
+
+  <script>
+    let num1, num2, operator, correctAnswer;
+
+    function generateExample() {
+      num1 = Math.floor(Math.random() * 30); // Случайное число от 0 до 9
+      num2 = Math.floor(Math.random() * 30); // Случайное число от 0 до 9
+      let operation = Math.floor(Math.random() * 3); // 0: +, 1: -, 2: *
+
+      switch (operation) {
+        case 0:
+          operator = "+";
+          correctAnswer = num1 + num2;
+          break;
+        case 1:
+          operator = "-";
+          correctAnswer = num1 - num2;
+          break;
+        case 2:
+          operator = "*";
+          correctAnswer = num1 * num2;
+          break;
+      }
+
+      document.getElementById("example").innerText = num1 + " " + operator + " " + num2 + " = ?";
+      document.getElementById("answer").value = ""; // Очищаем поле ввода
+      document.getElementById("answer").focus(); // Фокус на поле ввода
+    }
+
+    function checkAnswer() {
+      let userAnswer = parseInt(document.getElementById("answer").value);
+
+      if (isNaN(userAnswer)) {
+        document.getElementById("result").innerText = "Пожалуйста, введите число!✍️";
+        return;
+      }
+
+      if (userAnswer === correctAnswer) {
+        document.getElementById("result").innerText = "Красавчик!🏆";
+        
+        
+        
+        generateExample();
+
+      } else {
+        document.getElementById("result").innerText = "Ты ошибся, попробуй еще раз 🙁";
+
+      }
+
+  
+    }
+
+    // Генерируем первый пример при загрузке страницы
+    generateExample();
+  </script>
+
+</body>
+</html>
