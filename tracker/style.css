@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+td.today {
+  background-color: #e0f2f7;
+}
+input[type="checkbox"] {
+  transform: scale(1.2);
+}

@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #000000;
+    image-rendering: optimizeQuality;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(114, 246, 255);
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    color: #000000;
+    text-size-adjust: bold;
+}
+
+.navbar.logo  div {
+    font-size: 3rem;
+    font-weight: 500px;
+    color: #000000;
+    gap: 2rem;
+    font-weight: 1000;
+    list-style: none;
+    transition: 0.5s ease;
+    text-size-adjust: bold;
+}
+.nav-logo {
+    text-decoration: none;
+    color: #141414;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-size-adjust: bold;
+}
+.nav-link {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;    
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-link a:hover {
+    color: #ffffff;
+}
+
+.heroine {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #000000);
+    padding: 0.2rem;
+    animation: fadeln 2s ease;
+}
+
+.heroine h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.heroine p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #d000fff7;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #8763ff;
+}
+
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: overline;
+    background-color: #000000;
+    background-image:   url(bf8cb5d41d0546607006aed8839718c5.jpg) ;
+}
+.heroine {
+    background-image: url(1403258615_2133965234.jpg) ;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.service {
+    flex: 1 1 calc(30% - 2rem);
+    padding: 2rem;
+    border: 1px solid #bb00ff;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.section form textarea {
+    background-color: #000000;
+    color: #ffffff;
+}
+.section form input {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.service:hover {
+    transform: translateY(-25px) translateX(25px)
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d000ff;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 0.8rem 1.5rem;
+    background:#9900ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #2f00ffae;
+}
+
+footer  {
+    text-align: center;
+    background: #ffffffb0;
+    margin: 1rem;
+}
+.norma-form input, .norma-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #9000ff;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.norma-form button {
+    padding: 0.8rem 1.5rem;
+    background:#bb00ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.norma-form button:hover {
+    background: #1e00ffb4;
+}
+div[class*="gradient"]{
+    background-color: #ff0000;
+    box-shadow: 1px #ff0000;
+}
+.gradient-light-linear {
+    background-image: linear-gradient(rgb(255, 6, 6), rgb(255, 0, 0));
+}
+.gradient-dark-linear {
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0));
+}
