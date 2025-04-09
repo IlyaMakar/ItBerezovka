@@ -1,0 +1,237 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Портфолио</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Arial', sans-serif; 
+        } 
+         
+        body { 
+            background-color: #f5f5f5; 
+            color: #333; 
+            line-height: 1.6; 
+        } 
+         
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        } 
+         
+        header { 
+            text-align: center; 
+            padding: 40px 0; 
+            animation: fadeIn 1s ease-in-out; 
+        } 
+         
+        h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 10px; 
+        } 
+         
+        .sections { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-bottom: 40px; 
+            flex-wrap: wrap; 
+        } 
+         
+        .section-btn { 
+            padding: 10px 20px; 
+            background: #fff; 
+            border: none; 
+            border-radius: 30px; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        } 
+         
+        .section-btn:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+        } 
+         
+        .section-btn.active { 
+            background: #4a6fa5; 
+            color: white; 
+        } 
+         
+        .content-section { 
+            display: none; 
+            animation: fadeIn 0.5s ease-in-out; 
+        } 
+         
+        .content-section.active { 
+            display: block; 
+        } 
+         
+        .cards-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 30px; 
+        } 
+         
+        .card { 
+            background: white; 
+            border-radius: 10px; 
+            padding: 25px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+            opacity: 0; 
+            transform: translateY(20px); 
+            animation: fadeInUp 0.5s ease forwards; 
+        } 
+         
+        .card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+        } 
+         
+        .card:nth-child(1) { animation-delay: 0.1s; } 
+        .card:nth-child(2) { animation-delay: 0.2s; } 
+        .card:nth-child(3) { animation-delay: 0.3s; } 
+        .card:nth-child(4) { animation-delay: 0.4s; } 
+         
+        .card h3 { 
+            margin-bottom: 15px; 
+            color: #4a6fa5; 
+        } 
+         
+        .contact-card { 
+            text-align: center; 
+        } 
+         
+        .social-icons { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 20px; 
+        } 
+         
+        .social-icons a { 
+            color: #4a6fa5; 
+            font-size: 1.5rem; 
+            transition: all 0.3s ease; 
+        } 
+         
+        .social-icons a:hover { 
+            transform: scale(1.2); 
+            color: #2c4a7a; 
+        } 
+         
+        @keyframes fadeIn { 
+            from { opacity: 0; } 
+            to { opacity: 1; } 
+        } 
+         
+        @keyframes fadeInUp { 
+            from {  
+                opacity: 0; 
+                transform: translateY(20px); 
+            } 
+            to {
+opacity: 1; 
+                transform: translateY(0); 
+            } 
+        } 
+         
+        @media (max-width: 768px) { 
+            .cards-container { 
+                grid-template-columns: 1fr; 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <header> 
+            <h1>Мое Портфолио</h1> 
+            <p>Добро пожаловать на мою страницу-портфолио</p> 
+        </header> 
+         
+        <div class="sections"> 
+            <button class="section-btn active" data-section="about">О себе</button> 
+            <button class="section-btn" data-section="projects">Проекты</button> 
+            <button class="section-btn" data-section="contacts">Контакты</button> 
+        </div> 
+         
+        <div class="content-section active" id="about"> 
+            <div class="cards-container"> 
+                <div class="card"> 
+                    <h3><i class="fas fa-user"></i> Обо мне</h3> 
+                    <p>Привет! Я профессиональный разработчик с опытом работы в различных технологиях. Моя страсть - создавать красивые и функциональные веб-приложения.</p> 
+                </div> 
+                <div class="card"> 
+                    <h3><i class="fas fa-graduation-cap"></i> Образование</h3> 
+                    <p>Имею высшее образование в области компьютерных наук. Постоянно совершенствую свои навыки через онлайн-курсы и практику.</p> 
+                </div> 
+                <div class="card"> 
+                    <h3><i class="fas fa-code"></i> Навыки</h3> 
+                    <p>HTML, CSS, JavaScript, React, Node.js, Python и многое другое. Работаю с современными фреймворками и инструментами разработки.</p> 
+                </div> 
+            </div> 
+        </div> 
+        
+        <div class="content-section" id="projects"> 
+            <div class="cards-container"> 
+                <div class="card"> 
+                    <img src="https://source.unsplash.com/random/600x400/?web,app">
+                    <h3><i class="fas fa-laptop-code"></i> <a href="https://avatars.mds.yandex.net/i?id=477e087a89e5baadabfc8a1777086540e1913818-10652854-images-thumbs&n=13">Интернет-приложение</a></h3> 
+                    <h3><i class="fas fa-laptop-code"></i> <a href="https://avatars.mds.yandex.net/i?id=a98a4e180de9d8d967187b8c19a25a9fd9e8843a-7764851-images-thumbs&n=13">Веб-программа</a></h3>
+                    <p>Разработал современное веб-приложение с использованием React и Node.js, которое помогает пользователям организовать свою работу.</p> 
+                </div> 
+                <div class="card"> 
+                    <img src="https://source.unsplash.com/random/600x400/?mobile,app">
+                    <h3><i class="fas fa-mobile-alt"></i><a href="https://avatars.mds.yandex.net/i?id=4eb1f1ad0e0ab1cdc6fc2d95a2c5d3483a3869fd-5233331-images-thumbs&n=13">Платформа для сотовых</a></h3>
+                    <h3><i class="fas fa-mobile-alt"></i><a href="https://avatars.mds.yandex.net/i?id=1dc94cdb0fd8314904a0624c42d6c991d28f573d-10414794-images-thumbs&n=13">Мобильный сервис</a></h3>
+                    <p>Создал кроссплатформенное мобильное приложение с помощью React Native, которое уже скачали более 10,000 пользователей.</p> 
+                </div> 
+                <div class="card"> 
+                    <img src="https://source.unsplash.com/random/600x400/?analytics,data">
+                    <h3><i class="fas fa-chart-line"></i><a href="https://avatars.mds.yandex.net/i?id=bf7edb0e705540589147c6640d05b284677ee253-12434137-images-thumbs&n=13">Бизнес-аналитика</a></h3>
+                    <h3><i class="fas fa-chart-line"></i><a href="https://avatars.mds.yandex.net/i?id=3608517f3de30478f8d060ef669d35b8b36d3e4a-9311909-images-thumbs&n=13">Система поддержки принятия решений</a></h3> 
+                    <p>Разработал систему анализа данных для бизнеса, которая помогает принимать решения на основе больших данных.</p> 
+                </div> 
+            </div> 
+        </div> 
+         
+        <div class="content-section" id="contacts"> 
+            <div class="cards-container"> 
+                <div class="card contact-card"> 
+                    <h3><i class="fas fa-envelope"></i> Свяжитесь со мной</h3> 
+                    <p>Если у вас есть вопросы или предложения, не стесняйтесь написать мне!</p> 
+                    <p>Email: example@example.com</p> 
+                    <p>Телефон: +7 (123) 456-78-90</p> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+     
+    <script> 
+        document.addEventListener('DOMContentLoaded', function() { 
+            const sectionBtns = document.querySelectorAll('.section-btn'); 
+            const contentSections = document.querySelectorAll('.content-section'); 
+             
+            sectionBtns.forEach(btn => { 
+                btn.addEventListener('click', function() { 
+                    sectionBtns.forEach(b => b.classList.remove('active')); 
+                    contentSections.forEach(section => section.classList.remove('active'));
+this.classList.add('active'); 
+                    const sectionId = this.getAttribute('data-section'); 
+                    document.getElementById(sectionId).classList.add('active'); 
+                }); 
+            }); 
+        }); 
+    </script> 
+</body> 
+</html>
