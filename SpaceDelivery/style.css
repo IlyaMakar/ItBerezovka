@@ -1,0 +1,10 @@
+body {
+    background-color: #203c53;
+}
+
+#gameArea {
+    background-color: #0d2b45;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
