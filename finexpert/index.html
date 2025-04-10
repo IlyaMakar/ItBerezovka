@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+
+        .financial-header nav ul li a {
+            text-decoration: none; 
+            position: relative;
+            padding: 5px 10px;
+            color: inherit;
+        }
+        
+        .financial-header nav ul li a.active {
+            font-weight: bold; 
+        }
+        
+        .financial-header nav ul li a:not(.btn-login):hover {
+            text-decoration: none; 
+        }
+        
+        .financial-header nav ul li a:not(.btn-login):active {
+            transform: none; 
+        }
+        
+        .btn-login {
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансовый эксперт - Умное управление финансами</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <header class="financial-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Финансовый эксперт</span>
+            </div>
+            <nav>
+                <ul style="
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    gap: 10px; "    >
+    <li><a href="#" class="active">Главная</a></li>
+    <li><a href="#tools">Инструменты</a></li>
+    <li><a href="#education">Обучение</a></li>
+    <li><a href="articles/investing.html">Инвестиции</a></li>
+    <li><a href="auth/login.html" class="btn-login">Войти</a></li>
+</ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-finance">
+        <div class="hero-content">
+            <h1>Контролируйте свои финансы профессионально</h1>
+            <p>Аналитика, планирование и рекомендации для вашего финансового здоровья</p>
+            <div class="cta-buttons">
+                <a href="auth/register.html" class="btn btn-primary">Начать бесплатно</a>
+                <a href="#demo" class="btn btn-outline">Демо тест</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/finance-dashboard.png" alt="Финансовый дашборд">
+        </div>
+    </section>
+
+    <section id="tools" class="financial-tools">
+        <h2>Наши финансовые инструменты</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <i class="fas fa-calculator"></i>
+                <h3>Калькулятор бюджета</h3>
+                <p>Планируйте доходы и расходы</p>
+                <ul class="tool-features">
+                    <li><i class="fas fa-check-circle"></i> Автоматическая категоризация расходов</li>
+                    <li><i class="fas fa-check-circle"></i> Визуализация бюджета</li>
+                    <li><i class="fas fa-check-circle"></i> Рекомендации по оптимизации</li>
+                </ul>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-piggy-bank"></i>
+                <h3>Сбережения</h3>
+                <p>Стратегии накопления</p>
+                <ul class="tool-features">
+                    <li><i class="fas fa-check-circle"></i> Расчет сроков накопления</li>
+                    <li><i class="fas fa-check-circle"></i> Учет инфляции</li>
+                    <li><i class="fas fa-check-circle"></i> Различные стратегии накопления</li>
+                </ul>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Инвестиции</h3>
+                <p>Анализ портфеля</p>
+                <ul class="tool-features">
+                    <li><i class="fas fa-check-circle"></i> Сложный процент</li>
+                    <li><i class="fas fa-check-circle"></i> Разные стратегии инвестирования</li>
+                    <li><i class="fas fa-check-circle"></i> Анализ рисков</li>
+                </ul>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Кредитный калькулятор</h3>
+                <p>Расчет платежей по кредиту</p>
+                <ul class="tool-features">
+                    <li><i class="fas fa-check-circle"></i> Аннуитетные и дифференцированные платежи</li>
+                    <li><i class="fas fa-check-circle"></i> Досрочное погашение</li>
+                    <li><i class="fas fa-check-circle"></i> Сравнение кредитных предложений</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</head>
+<body>
+    <header class="financial-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Финансовый эксперт</span>
+            </div>
+            <nav>
+            </nav>
+        </div>
+    </header>
+
+    <section class="client-success">
+        <div class="container">
+            <h2>Успехи наших клиентов</h2>
+            <p>Статистика финансовых улучшений за последний год</p>
+            <div class="chart-container" style="position: relative; height:400px; width:100%; max-width:600px; margin: 0 auto;">
+                <canvas id="successChart"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="demo" class="demo-section">
+        <h2>Попробуйте демо-версию</h2>
+        <p>Ознакомьтесь с основными функциями без регистрации</p>
+        <a href="https://example.com/demo" class="btn btn-primary">Запустить демо</a>
+    </section>
+
+    <footer class="financial-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Финансовый эксперт</h4>
+                <p>Умные решения для ваших финансов</p>
+            </div>
+            <div class="footer-section">
+                <h4>Быстрые ссылки</h4>
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href=https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C>Политика конфиденциальности</a></li>
+                    
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p>Тут должна быть почта но её нет </p>
+                <p>Тут должен быть номер телефона но его нет</p>
+            </div>
+            <div class="footer-section">
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Финансовый эксперт 2025 Все ваши права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('successChart').getContext('2d');
+            const successChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: [
+                        'Увеличили доходы',
+                        'Сократили расходы',
+                        'Накопили сбережения',
+                        'Начали инвестировать',
+                        'Погасили долги'
+                    ],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            '#4BC0C0',
+                            '#36A2EB',
+                            '#FFCE56',
+                            '#FF6384',
+                            '#9966FF'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Финансовые улучшения клиентов ',
+                            font: {
+                                size: 16
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.label}: ${context.raw}% клиентов`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+
+    <footer class="financial-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4></h4>
+                <p></p>
+            </div>
+            <div class="footer-section">
+                <h4></h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; </p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+
